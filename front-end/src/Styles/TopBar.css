@@ -1,0 +1,144 @@
+/* Centrar el contenido dentro de la topbar */
+.topbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar .container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.menu-desplegable {
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  animation: slide-down 0.3s ease-out;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: auto;
+  z-index: 100;
+  display: flex;
+}
+
+.menu-desplegable ul {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+}
+
+/* Animación de deslizar hacia abajo */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-section {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #666;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: #333;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.menu-item i {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+.menu-item:hover {
+  background-color: #f0f4f8;
+  color: #4caf50;
+}
+
+.menu-section + .menu-section {
+  margin-top: 20px;
+}
+
+.menu-footer {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 1023px) {
+  .lg\:hidden {
+    display: block;
+  }
+  .lg\:flex {
+    display: none;
+  }
+
+  .topbar .container {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+  .lg\:flex {
+    display: flex;
+  }
+}
+
+.bg-green-500 {
+  background-color: #4caf50;
+}
+
+.text-white {
+  color: white;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+@media (max-width: 955px) {
+  .menu-desplegable {
+    left: 0;
+    display: block;
+  }
+}

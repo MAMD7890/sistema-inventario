@@ -1,0 +1,183 @@
+/* Estilos base */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-with-sidebar {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+}
+
+.content-area {
+  padding: 20px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px 30px 30px 10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.movements-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-new-movement {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: clamp(10px, 4vw, 14px);
+}
+
+.movih1 {
+  color: #333;
+  font-size: clamp(1.5em, 4vw, 2.5em);
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Asegura un ancho mínimo para forzar el scroll */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.current-page {
+  margin: 0 10px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.user-profile {
+  position: relative; /* Necesario para posicionar el menú relativo a este contenedor */
+}
+
+.user-profile .dropdown-menu {
+  position: absolute;
+  top: 100%; /* Esto posiciona el menú justo debajo de la imagen */
+  left: 0; /* Alinea el menú con el borde izquierdo de la imagen */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .content-area {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-new-movement {
+    margin: 0 !important;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .movements-section {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  table {
+    font-size: 14px; /* Reduce ligeramente el tamaño de fuente */
+  }
+
+  th,
+  td {
+    padding: 6px; /* Reduce el padding de las celdas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-profile {
+    margin-bottom: 10px;
+  }
+
+  .circle {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 12px; /* Reduce aún más el tamaño de fuente */
+  }
+
+  th,
+  td {
+    padding: 4px; /* Reduce aún más el padding de las celdas */
+  }
+}

@@ -1,0 +1,41 @@
+/* Estilos personalizados para las pestañas */
+.tabs {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.tabs .tab a {
+  color: #000;
+}
+
+.tabs .tab a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.tabs .indicator {
+  display: none;
+}
+
+.tabs .tab a.active {
+  background-color: #fff;
+}
+
+/* Estilo para el contenido de las pestañas */
+#tab1,
+#tab2 {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+#tab1.active,
+#tab2.active {
+  display: block;
+}
+
+.botonBusque:hover {
+  color: #fff;
+  background-color: #000;
+}

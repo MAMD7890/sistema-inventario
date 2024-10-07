@@ -1,0 +1,215 @@
+body {
+  background-color: #f0f3fa;
+  background-image: radial-gradient(circle at 20% 30%, #d5deef, transparent 20%),
+    radial-gradient(circle at 80% 70%, #b1c9ef, transparent 20%),
+    radial-gradient(circle at 50% 90%, #d5deef, transparent 20%),
+    radial-gradient(circle at 30% 20%, #b1c9ef, transparent 20%);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+  /* color: #395886;  */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login-image {
+  flex: 1;
+  overflow: hidden;
+  display: none; /* Oculto por defecto en móviles */
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 2rem;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: #ffffff; /* Mantén el blanco para un buen contraste */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  color: #395886; /* Color oscuro para el título */
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: #638ecb; /* Color ligeramente más claro para el subtítulo */
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 87% !important;
+  padding: 0px 0px 0px 40px !important;
+  border: 1px solid #d5deef; /* Borde con un color suave */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #395886; /* Color oscuro para el texto */
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #b1c9ef !important; /* Color más suave para el texto */
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #8aaee0 !important;
+  box-shadow: 0 1px 0 0 #8aaee0 !important;
+}
+
+.input-container.has-value label,
+.input-container input:focus + label {
+  top: 0;
+  font-size: 12px;
+  color: #8aaee0; /* Color intermedio para el label al enfocar */
+  background: #ffffff;
+  padding: 0 5px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #8aaee0; /* Color intermedio para el icono */
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #8aaee0; /* Mismo color para el toggle de contraseña */
+}
+
+.login-button {
+  background: #395886; /* Color oscuro para el botón */
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: #638ecb; /* Color ligeramente más claro al hacer hover */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d5deef; /* Línea separadora en un color suave */
+}
+
+.separator span {
+  padding: 0 10px;
+  color: #395886; /* Color oscuro para el texto del separador */
+}
+
+.google-button {
+  background: #ffffff;
+  color: #395886; /* Color oscuro para el texto del botón */
+  border: 1px solid #d5deef; /* Borde en un color suave */
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.google-button:hover {
+  background: #f0f3fa; /* Color de fondo al hacer hover */
+}
+
+.google-button i {
+  margin-right: 10px;
+  color: #8aaee0; /* Icono en un color intermedio */
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #395886; /* Color oscuro para el texto */
+}
+
+.register-link a {
+  color: #638ecb; /* Color para el enlace */
+  text-decoration: none;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .login-image {
+    display: block; /* Mostrar en pantallas más grandes */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px;
+  }
+}
